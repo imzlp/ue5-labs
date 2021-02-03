@@ -1,6 +1,6 @@
-## UE5
+# UE5
 
-### Epic Verse 语法介绍
+## Epic Verse 语法介绍
 认真看了一下[Inside Unreal:2020 Year In Review](https://www.twitch.tv/videos/840713360?t=1h6m20s)里展示的Epic Verse代码，看起来新的脚本语言很像`pascal`和`Python`的结合体，而且还有点ruby味，Verse具有静态类型，某些语法与[SkookumScript](https://skookumscript.com/docs/v3.0/#ojb-id-potential-reference)非常像。
 
 2019年初Epic收购了[Agog Labs (and SkookumScript)](https://skookumscript.com/blog/2019/01-23-epic-aquires-agog/)，应该是要来打造UE5的脚本语言，所以UE5的语法结构和SkookumScript比较像应该是比较合理的，根据视频里的展示情况，我认为UE5的脚本语言应该就是Agog Labs做的。
@@ -95,14 +95,14 @@ BoxFight=class(FortGameScriptBase):
                 # Display the scoreboard.
 ```
 
-#### class定义
+### class定义
 首先是class定义（暂且标记为继承形式）：
 
 ```cpp
 BoxFight = class(FortGameScriptBase):
 ```
 
-#### 变量声明
+### 变量声明
 
 > 具有静态类型，并且无需`;`
 
@@ -111,7 +111,7 @@ GameStarted^: bool = false
 CurrentRound^: int = 0
 ```
 
-#### 变量赋值
+### 变量赋值
 
 > 类似与`pascal`语言（SkookumScript也是如此）
 
@@ -119,7 +119,7 @@ CurrentRound^: int = 0
 GameStarted := 1
 ```
 
-#### 代码块
+### 代码块
 类似于Python的缩进，需要使用`:`标识：
 
 ```cpp
@@ -137,7 +137,7 @@ else:
 
 >Optional ‘?’ used as convention to indicate predicate variable or method of return type Boolean (true or false). 
 
-#### 循环语句
+### 循环语句
 整型迭代：
 
 ```cpp
@@ -149,14 +149,14 @@ for(i = 1..NumberOfRounds):
 for i in 0..100 do
 ```
 
-#### 函数调用
+### 函数调用
 使用`.`来调用成员函数：
 
 ```cpp
 Players.SetAllInRound()
 ```
 
-#### 具有类似协程的形式
+### 具有类似协程的形式
 
 ```cpp
 if(IsSoloGame()?):
@@ -173,7 +173,7 @@ else:
 
 这门脚本语言看起来更像是以[SkookumScript](https://skookumscript.com/docs/v3.0/#ojb-id-potential-reference)为基础，糅合了数种编程语言的集合体，目前展示的代码还太少，不好说具体的上手表现怎么样，持续关注。
 
-### Epic收购RAD Game Tools
+## Epic收购RAD Game Tools
 Epic收购了RAD Game Tools，又开启了买买买模式，Fortnite使用的Oodle压缩算法就是这家做的。
 - [Gaming Software Pioneer RAD Game Tools Now Part of Epic Games](https://www.epicgames.com/site/en-US/news/epic-acquires-rad-game-tools)
 - [RAD Game Tools](http://www.radgametools.com/)
@@ -183,7 +183,7 @@ Epic收购了RAD Game Tools，又开启了买买买模式，Fortnite使用的Ood
 我觉得对于Epic而言，收购它目前比较重要的是得到压缩相关的技术积累，这一点对UE5格外重要，因为UE5可以直接使用影视级别的素材资源，资源的大小和相对应的加载时间会成为瓶颈（我认为这也是UE5的首发演示是在PS5上的主要原因），所以需要针对UE5进行定制化的资源压缩方案。希望UE5在2021年的第一季度末尾能顺利出beta版本，不要跳票。
 
 
-### UE5可能的脚本语言
+## UE5可能的脚本语言
 在Epic的[Inside Unreal:2020 Year In Review](https://www.twitch.tv/videos/840713360?t=1h6m20s)中介绍了一个全新的脚本语言，有可能被称作`Epic Verse`。
 
 reddit上关于该脚本语言的讨论：[Epic showed off their new Unreal Verse scripting language that will probably end up in UE5](https://www.reddit.com/r/unrealengine/comments/kf8z27/epic_showed_off_their_new_unreal_verse_scripting/)
@@ -209,7 +209,7 @@ UE4的蓝图极大地降低了非专业开发者的上手门槛，图形化编�
 
 两年前Tim在Reddit上有一些相关的回复和讨论：[It seems people at Epic are considering adding some intermediate script language between C++ and Blueprints](https://www.reddit.com/r/unrealengine/comments/aezhdv/it_seems_people_at_epic_are_considering_adding/edxha25/)
 
-### UE5的PS5真机视频
+## UE5的PS5真机视频
 
 Epic发布的UE5的PS5的真机视频：
 [![](https://external.imzlp.me/2020/20201222102108.png)](https://www.bilibili.com/video/BV1BK411W75W?from=search&seid=15995162156836004073)

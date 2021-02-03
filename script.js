@@ -14,11 +14,15 @@ new Docute({
       title: 'Feeds',
       links: [
         {
-          title: 'UE4',
+          title: 'Z\'s Blog',
+          link: 'https://imzlp.me/'
+        },
+        {
+          title: 'UE4 Notes',
           link: 'https://imzlp.me/notes/ue'
         },
         {
-          title: 'UE5',
+          title: 'UE5 News',
           link: '/UE5'
         }
       ]
