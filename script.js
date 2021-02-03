@@ -7,6 +7,14 @@ new Docute({
     {
       title: 'Home',
       link: '/'
+    },
+    {
+      title: 'Blog',
+      link: 'https://imzlp.me/'
+    },
+    {
+      title: 'Github',
+      link: 'http://github.com/hxhb'
     }
   ],
   sidebar: [
@@ -14,16 +22,12 @@ new Docute({
       title: 'Feeds',
       links: [
         {
-          title: 'Z\'s Blog',
-          link: 'https://imzlp.me/'
+          title: 'UE5 News',
+          link: '/UE5'
         },
         {
           title: 'UE4 Notes',
           link: 'https://imzlp.me/notes/ue'
-        },
-        {
-          title: 'UE5 News',
-          link: '/UE5'
         }
       ]
     }
