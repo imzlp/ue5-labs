@@ -9,8 +9,8 @@ new Docute({
       link: '/'
     },
     {
-      title: 'Blog',
-      link: 'https://imzlp.me/'
+      title: 'MyBlog',
+      link: 'https://imzlp.com/'
     },
     {
       title: 'Github',
@@ -27,7 +27,7 @@ new Docute({
         },
         {
           title: 'UE4 Notes',
-          link: 'https://imzlp.me/notes/ue'
+          link: 'https://imzlp.com/notes/ue'
         }
       ]
     }
