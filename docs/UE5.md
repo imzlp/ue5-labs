@@ -1,4 +1,46 @@
 # UE5
+## Oodle Compression
+![](https://imzlp.com/notes/ue5/index/oodle.png)
+
+和我当初预想的一样，2021.04.01的Feeds：Epic把Oold集成到UE4.27和UE5中了。
+- [Oodle now free to use in Unreal Engine via GitHub](https://www.unrealengine.com/en-US/blog/oodle-now-free-to-use-in-unreal-engine-via-github)
+- [RAD Game Tools’ Oodle—cross-platform data compression solutions](https://forums.unrealengine.com/development-discussion/rendering/1876442-rad-game-tools%E2%80%99-oodle%E2%80%94cross-platform-data-compression-solutions)
+
+他们会提供四种Oodle系列的压缩算法：
+- Oodle Data Compression：最快和最高压缩比的压缩算法，可以用于数据压缩、打包压缩等。
+- Oodle Texture：用来压缩Texture，可以压缩BC1-BC7Texture，能够减少50%的Texture大小（官方数据）。
+- Oodle Network Compression：压缩TCP/UDP数据，降低与服务器传输占用的带宽。
+- Oodle Lossless Image Compression：无损图像压缩算法，比png小很多且具有非常高的解压速度。
+
+目前（2021.04.05）可以拉取UE的`master`分支，下载依赖之后在以下目录下：
+
+```txt
+E:\UnrealEngine\Source\UnrealEngine\Engine\Plugins\Compression
+E:\UnrealEngine\Source\UnrealEngine\Engine\Plugins\Developer\TextureFormatOodle
+```
+具有`OodleData`和`OodleNetwork`、`TextureFormatOodle`三个插件，注意必须要下载依赖。不然代码中只有`.h`接口，并没有各个平台的链接库。
+
+比较遗憾的是在更早的引擎版本中不支持，我从UE的开发分支把这部分代码抽离了出来，放到了单独的仓库中：[oodle-compression](https://github.com/hxhb/oodle-compression)，看了代码并没有依赖新版本引擎相关的东西，但是直接在低版本引擎启用会有编译错误，我已修复。插件中的实现也是通过SDK把Oodle添加到了UE的Compression的Modular Feature中，同样可以按照我之前这篇文章的介绍中的方法使用：[ModularFeature：为UE4集成ZSTD压缩算法](https://imzlp.com/posts/8470/)。
+
+>注意：默认打包时启用Oodle需要给UnrealPak添加OodleData的插件依赖，这需要重新编译UnrealPak。
+
+通过传递给UnrealPak命令行参数`-compressionformats=Oodle`来指定Oodle，以及`-compresslevel=Leviathan`来指定压缩级别，经过测试，一个使用zlib压缩之后有295M的pak文件使用Oodle压缩降低到了282M，但是Oodle的解压速度完胜zlib。
+
+Oodle的压缩性能在RAD网站上有对比数据：[Oodle Compression](http://www.radgametools.com/oodle.htm)
+
+![](https://imzlp.com/notes/ue5/index/oodle_typical_vbar.webp)
+![](https://imzlp.com/notes/ue5/index/oodle260_typical_combined.webp)
+
+其他的对比数据：
+- [PS4 Battle : LZ4 vs LZSSE vs Oodle](https://cbloomrants.blogspot.com/2016/05/ps4-battle-lz4-vs-lzsse-vs-oodle.html)
+
+压缩算法的选择就是要在压缩率/解压速度上来做一个权衡，就是压缩率最低的`Selkie`也比zlib要强一点点，但是decompress速度比zlib高了十几倍，对于游戏而言解压速度非常直观地影响到游戏性能，这应该也是UE选择收购RAD的原因吧。
+
+其他资料：
+- [How Oodle Kraken and Oodle Texture supercharge the IO system of the Sony PS5](https://cbloomrants.blogspot.com/2020/09/how-oodle-kraken-and-oodle-texture.html)
+- [cbloom rants](https://cbloomrants.blogspot.com/)
+- [Oodle Texture compression](https://encode.su/threads/3426-Oodle-Texture-compression)
+- [PS5 IO System to Be ‘Supercharged’ by Oodle Texture, Bandwidth Goes Up to 17.38GB/s](https://wccftech.com/ps5-io-system-to-be-supercharged-by-oodle-texture-bandwidth-goes-up-to-17-38gb-s/)
 
 ## Epic Verse 语法介绍
 认真看了一下[Inside Unreal:2020 Year In Review](https://www.twitch.tv/videos/840713360?t=1h6m20s)里展示的Epic Verse代码，看起来新的脚本语言很像`pascal`和`Python`的结合体，而且还有点ruby味，Verse具有静态类型，某些语法与[SkookumScript](https://skookumscript.com/docs/v3.0/#ojb-id-potential-reference)非常像。
