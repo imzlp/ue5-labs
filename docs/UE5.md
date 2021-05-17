@@ -1,6 +1,6 @@
 # UE5
 ## Oodle Compression
-![](https://imzlp.com/notes/ue5/index/oodle.png)
+![](https://img.imzlp.com/imgs/zlp/blog/notes/ue5/index/oodle.png)
 
 和我当初预想的一样，2021.04.01的Feeds：Epic把Oold集成到UE4.27和UE5中了。
 - [Oodle now free to use in Unreal Engine via GitHub](https://www.unrealengine.com/en-US/blog/oodle-now-free-to-use-in-unreal-engine-via-github)
@@ -28,8 +28,8 @@ E:\UnrealEngine\Source\UnrealEngine\Engine\Plugins\Developer\TextureFormatOodle
 
 Oodle的压缩性能在RAD网站上有对比数据：[Oodle Compression](http://www.radgametools.com/oodle.htm)
 
-![](https://imzlp.com/notes/ue5/index/oodle_typical_vbar.webp)
-![](https://imzlp.com/notes/ue5/index/oodle260_typical_combined.webp)
+![](https://img.imzlp.com/imgs/zlp/blog/notes/ue5/index/oodle_typical_vbar.webp)
+![](https://img.imzlp.com/imgs/zlp/blog/notes/ue5/index/oodle260_typical_combined.webp)
 
 其他的对比数据：
 - [PS4 Battle : LZ4 vs LZSSE vs Oodle](https://cbloomrants.blogspot.com/2016/05/ps4-battle-lz4-vs-lzsse-vs-oodle.html)
@@ -51,10 +51,10 @@ Oodle的压缩性能在RAD网站上有对比数据：[Oodle Compression](http://
 
 视频展示的代码如下：
 
-![](https://external.imzlp.me/2020/0.webp)
-![](https://external.imzlp.me/2020/1.webp)
-![](https://external.imzlp.me/2020/2.webp)
-![](https://external.imzlp.me/2020/3.webp)
+![](https://img.imzlp.com/imgs/zlp/picgo/2020/0.webp)
+![](https://img.imzlp.com/imgs/zlp/picgo/2020/1.webp)
+![](https://img.imzlp.com/imgs/zlp/picgo/2020/2.webp)
+![](https://img.imzlp.com/imgs/zlp/picgo/2020/3.webp)
 
 手敲了遍文本：
 
@@ -254,7 +254,7 @@ UE4的蓝图极大地降低了非专业开发者的上手门槛，图形化编�
 ## UE5的PS5真机视频
 
 Epic发布的UE5的PS5的真机视频：
-[![](https://external.imzlp.me/2020/20201222102108.png)](https://www.bilibili.com/video/BV1BK411W75W?from=search&seid=15995162156836004073)
+[![](https://img.imzlp.com/imgs/zlp/picgo/2020/20201222102108.png)](https://www.bilibili.com/video/BV1BK411W75W?from=search&seid=15995162156836004073)
 
 Epic Feeds里的介绍：[A first look at Unreal Engine 5](https://www.unrealengine.com/en-US/blog/a-first-look-at-unreal-engine-5)
 
