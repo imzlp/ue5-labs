@@ -1,4 +1,16 @@
 # UE5
+
+<script src="https://gist.github.com/imzlp/1bb948d5361b68e6856fa2de9ad45a31.js"></script>
+
+UE5第一个预览版终于要来了，2021.05.26晚10点开启抢先预览！[虚幻引擎5——将于中国时间5月26日周三晚10点开启抢先体验计划！](https://mp.weixin.qq.com/s/W0e79uhqOyxLKXeC9MwnDg)
+
+![image-20210525141457788](https://img.imzlp.com/imgs/zlp/picgo/2021/image-20210525141457788.png)
+
+附之前Epic中国直播的UE开发路线图视频：
+
+- [[中文直播]第29期｜解析虚幻引擎开发路线图(上集) | Epic 王祢 马骥 孙丹璐](https://www.bilibili.com/video/BV1wA411H7h3)
+- [[中文直播]第29期｜解析虚幻引擎开发路线图(下集) | Epic 王祢 马骥 孙丹璐](https://www.bilibili.com/video/BV1iK411P7QD)
+
 ## Oodle Compression
 ![](https://img.imzlp.com/imgs/zlp/blog/notes/ue5/index/oodle.png)
 
