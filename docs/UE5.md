@@ -2,6 +2,8 @@
 
 <script src="https://gist.github.com/imzlp/1bb948d5361b68e6856fa2de9ad45a31.js"></script>
 
+初步上手UE5，我写了篇文章：[UE5：新一代虚幻引擎初探](https://imzlp.com/posts/8724/)，已发布的UE5资料和分析内容会放到这篇文章中。
+
 UE5第一个预览版终于要来了，2021.05.26晚10点开启抢先预览！[虚幻引擎5——将于中国时间5月26日周三晚10点开启抢先体验计划！](https://mp.weixin.qq.com/s/W0e79uhqOyxLKXeC9MwnDg)
 
 ![image-20210525141457788](https://img.imzlp.com/imgs/zlp/picgo/2021/image-20210525141457788.png)
